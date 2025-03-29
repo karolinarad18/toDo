@@ -1,8 +1,9 @@
-const recArr = require("./assets/recArr.png");
-const { useNavigate } = require("react-router-dom");
-const { useState } = require("react");
-const FadeLoader = require("react-spinners/FadeLoader");
-const axios = require("axios");
+import recArr from "./assets/recArr.png";
+import { useNavigate } from "react-router-dom";
+
+import { useState }  from "react";
+import {FadeLoader} from "react-spinners/FadeLoader";
+import axios from "axios";
 export default function Login() {
     const navigate = useNavigate();
     const [loading, setLoading] = useState(false);
@@ -26,7 +27,7 @@ export default function Login() {
         setLoading(true);
 
         try {
-            const response = await axios.post('http://localhost:3001/login', values);
+            const response = await axios.post('http://localhost:3001/', values);
             console.log(response.data);
 
             if (response.data === "Success") {
