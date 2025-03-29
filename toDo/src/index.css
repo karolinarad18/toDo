@@ -1,0 +1,154 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  font-family: 'Gamja Flower';
+
+}
+#header{
+  height: 80px;
+  width: 100%;
+  background-color: #EACACB;
+}
+#main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+}
+#main p{
+  font-size: 25px;
+}
+#user, #email{
+  padding: 15px;
+  width: 300px;
+  font-size: 22px;
+  display: block;
+  border: 0px;
+  background-color: rgb(226, 226, 226);
+  outline: none;
+  height: 40px;
+  margin: 10px;
+}
+#password{
+  padding: 15px;
+  width: 100%;
+  font-size: 22px;
+  display: block;
+  height: 40px;
+  border: none;
+  background-color: rgb(226, 226, 226);
+  outline: none;
+}
+
+#arrow {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+#password{
+  flex: 1;
+
+}
+#main > div{
+  display: flex;
+  align-items: center;
+  background-color: rgb(226, 226, 226);
+  width: 300px;
+  margin: 10px;
+}
+#helloKittyimg{
+  width: 15%;
+  
+}
+
+#createAcc{
+  text-decoration: none;
+  color: black;
+  margin: 20px;
+  cursor: pointer;
+  font-size: 20px;
+}
+#createAcc:hover{
+  text-decoration: underline;
+}
+#trash{
+  width: 2%;
+}
+#tasksMain{
+  width: 50%;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 28px;
+}
+#tasksMain p{
+  margin: 20px;
+}
+#logout{
+  font-size: 22px;
+  background-color: black;
+  color: white;
+  border: none;
+  width: 30%;
+  height: 40px;
+  cursor: pointer;
+  margin: 20px;
+}
+
+#tasksAside{
+  width: 50%;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+}
+#tasksContainer{
+  display: flex;
+}
+#tasksAside #date {
+  display: flex;
+  justify-content: space-between;
+
+}
+#tasksAside h1{
+  font-size: 40px;
+}
+#tasksAside #addnew{
+  width: 20%;
+  background-color: white;
+  border: solid 0.5px;
+  height: 30px;
+  font-size: 20px;
+  cursor: pointer;
+  transition-duration: 0.1s;
+}
+#tasksAside #addnew:hover{
+  background-color: hwb(0 79% 21%);
+}
+#tasks .task{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 22px;
+
+}
+.task div{
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+
+#tasks{
+  margin-top: 30px;
+}
+
+#tasks #done{
+  border-radius: 100%;
+  border: none;
+  width: 40px;
+  height: 40px;
+  margin: 20px;
+}
