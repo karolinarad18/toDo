@@ -6,7 +6,7 @@ export default function Tasks(){
         <div id='tasksContainer'>
             <main id='tasksMain'>
                 <Calendar id="calendar"/>
-                <p>username: </p>
+                <p>username:  </p>
                 <button id='logout'>log out</button>
             </main>
             <aside id='tasksAside'>
@@ -17,7 +17,7 @@ export default function Tasks(){
                 <h1>to-do list</h1>
                 <button id='addnew'>add new</button>
                 <div id='tasks'>
-                    <div class="task">
+                    <div className="task">
                         <div>
                         <button id='done'></button>
                         <p>take out the trash</p>

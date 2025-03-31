@@ -23,11 +23,19 @@ export default function Register(){
         })
         const handleSubmit = (e) =>{
             e.preventDefault()
-            axios.post('http://localhost:3001/registers',{username,email,password}) //??
-            .then(result => console.log(result),
-             navigate("/tasks"))
-            .catch(err => console.log(err))
-            
+            axios.post('http://localhost:3001/register',
+                {
+                    username:values.username,
+                    email:values.email,
+                    password:values.password
+                }) 
+                .then(result => {
+                    console.log("Registration successful:", result); // Dodaj log odpowiedzi
+                    navigate("/tasks");
+                })
+                .catch(err => {
+                    console.error("Error during registration:", err); // Dodaj log błędu
+                });
         }
     return(
         <>
