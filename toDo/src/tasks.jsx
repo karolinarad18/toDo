@@ -1,13 +1,21 @@
 import {Calendar} from 'react-calendar'
 import trash from "./assets/trash.png";
 import 'react-calendar/dist/Calendar.css';
+import { useNavigate } from 'react-router';
 export default function Tasks(){
+    const username = localStorage.getItem("loggedUser")
+    const navigate = useNavigate()
+    
+    const handleLogout = () =>{
+        localStorage.removeItem("loggedUser")
+        navigate("/")
+    }
     return(
         <div id='tasksContainer'>
             <main id='tasksMain'>
                 <Calendar id="calendar"/>
-                <p>username:  </p>
-                <button id='logout'>log out</button>
+                <p>username: {username} </p>
+                <button id='logout' onClick={handleLogout}>log out</button>
             </main>
             <aside id='tasksAside'>
                 <div id='date'>

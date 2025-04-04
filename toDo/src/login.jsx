@@ -11,7 +11,7 @@ export default function Login() {
         username: "",
         password: ""
     });
-    const [user,setUser]=useState(null)
+    const [user]=useState(null)
     // 🔹 Spinner do przejścia do rejestracji
     const spinner = () => {
         setLoading(true);
@@ -29,10 +29,10 @@ export default function Login() {
         try {
             const response = await axios.post('http://localhost:3001/login', values);
             console.log(response.data);
-
+            localStorage.setItem("loggedUser",values.username)
             if (response.data === "Success") {
-                setUser(values.username)
-                navigate("/tasks");
+                
+                navigate("/tasks"); 
             } else {
                 alert("Invalid username or password!");
             }
